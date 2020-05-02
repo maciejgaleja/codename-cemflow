@@ -24,6 +24,8 @@ public:
 
   void log(const Message &msg);
 
+  void setSeverity(Severity sev);
+
   LogHandler debug() { return LogHandler(*this, Severity::Debug); }
 
   LogHandler error() { return LogHandler(*this, Severity::Error); }
@@ -31,6 +33,7 @@ public:
 private:
   std::mutex m_mutex;
   std::map<std::thread::id, std::list<const Trace *>> m_traces;
+  Severity m_severity_level = Severity::Trace;
 };
 
 } // namespace ltr

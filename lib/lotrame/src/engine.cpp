@@ -45,15 +45,23 @@ void Engine::traceUnRegister(const Trace *trace) {
 }
 
 void Engine::log(const Message &msg) {
-  std::thread::id threadId = std::this_thread::get_id();
-  stringstream ss;
-  ss << "WORK  ";
-  ss << threadId << " (" << std::setw(6) << 0 << " us) ";
-  for (auto &t : m_traces[threadId]) {
-    ss << t->toString() << " -> ";
+  if(msg.severity <= m_severity_level) {
+    std::thread::id threadId = std::this_thread::get_id();
+    stringstream ss;
+    ss << "WORK  ";
+    ss << threadId << " (" << std::setw(6) << 0 << " us) ";
+    for (auto &t : m_traces[threadId]) {
+      ss << t->toString() << " -> ";
+    }
+    ss << msg.text << endl;
+    cout << ss.str();
   }
-  ss << msg.text << endl;
-  cout << ss.str();
 }
+
+void Engine::setSeverity(Severity sev)
+{
+  m_severity_level = sev;
+}
+
 
 } // namespace ltr
