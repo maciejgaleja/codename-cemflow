@@ -63,7 +63,7 @@
         "clang_format": true,
         "format_footer": false,
         "format_header": false,
-        "header_guard": false,
+        "header_guard": true,
         "sections": false
     },
     "scope": {

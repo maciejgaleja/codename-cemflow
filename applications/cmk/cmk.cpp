@@ -4,29 +4,15 @@
 #include <iostream>
 #include <sstream>
 
+#include "run_config.hpp"
+
 using namespace clipp;
-using std::cout;
 using std::cerr;
+using std::cout;
 using std::string;
 
 namespace fs = std::filesystem;
 
-class RunConfig
-{
-public:
-    enum class Mode
-    {
-        GENERATE,
-        BUILD,
-        INSTALL,
-        CLEAN,
-        REBUILD
-    };
-    Mode mode = Mode::GENERATE;
-    fs::path project_dir;
-    fs::path build_dir;
-    std::string install_dir;
-};
 
 static bool read_env(const std::string& name, std::string& dst)
 {
@@ -53,8 +39,8 @@ static bool generate(RunConfig& cfg)
     if(ret)
     {
         std::stringstream ss;
-        ss << "cmake -DCMAKE_INSTALL_PREFIX=" << cfg.install_dir << " -S " << cfg.project_dir.string() << " -B "
-           << cfg.build_dir.string();
+        ss << "cmake -DCMAKE_INSTALL_PREFIX=" << cfg.install_dir << " -S "
+           << cfg.project_dir.string() << " -B " << cfg.build_dir.string();
         cout << ss.str() << '\n';
         system(ss.str().c_str());
     }
@@ -124,7 +110,8 @@ int main(int argc, char* argv[])
     auto cli_install =
         (command("install").set(cfg.mode, RunConfig::Mode::INSTALL));
     auto cli_clean = (command("clean").set(cfg.mode, RunConfig::Mode::CLEAN));
-    auto cli_rebuild = (command("rebuild").set(cfg.mode, RunConfig::Mode::REBUILD));
+    auto cli_rebuild =
+        (command("rebuild").set(cfg.mode, RunConfig::Mode::REBUILD));
 
     auto cli = cli_generate | cli_build | cli_install | cli_clean | cli_rebuild;
 
