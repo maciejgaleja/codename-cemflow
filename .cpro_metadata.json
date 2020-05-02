@@ -3,6 +3,10 @@
         "additional_authors": [],
         "brief": ""
     },
+    "applications/cmk/run_config.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
     "lib/libcmake/cmake.cpp": {
         "additional_authors": [],
         "brief": ""

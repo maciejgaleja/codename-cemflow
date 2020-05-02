@@ -25,15 +25,11 @@
                 ""
             ]
         ],
-        "filename_only": false,
-        "is_block_comment": true,
+        "filename_only": true,
+        "is_block_comment": false,
         "template": [
-            "/**",
             "${FILE}",
-            "${AUTHOR}",
-            "${DATE}",
-            "${BRIEF}",
-            " **/"
+            "${DATE}"
         ]
     },
     "header_guard": {
@@ -62,7 +58,7 @@
     "operations": {
         "clang_format": true,
         "format_footer": false,
-        "format_header": false,
+        "format_header": true,
         "header_guard": true,
         "sections": false
     },
