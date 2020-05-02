@@ -1,3 +1,5 @@
 add_subdirectory(clipp)
 add_subdirectory(utilities)
 add_subdirectory(libcmake)
+add_subdirectory(hunspell)
+add_subdirectory(lotrame)

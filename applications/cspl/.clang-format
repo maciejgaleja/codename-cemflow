@@ -125,6 +125,6 @@ SortIncludes: true
 # Comments are for developers, they should arrange them
 ReflowComments: false
 
-IncludeBlocks: Regroup
+IncludeBlocks: Preserve
 
 MaxEmptyLinesToKeep: 2

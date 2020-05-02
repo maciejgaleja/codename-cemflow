@@ -7,11 +7,167 @@
         "additional_authors": [],
         "brief": ""
     },
+    "applications/cspl/cspl.cpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "applications/cspl/cspl.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "applications/cspl/dictionary/custom_dictionary.cpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "applications/cspl/dictionary/custom_dictionary.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "applications/cspl/dictionary/dictionary.cpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "applications/cspl/dictionary/dictionary.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "applications/cspl/log.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "applications/cspl/main.cpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "applications/cspl/processing/char_filter.cpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "applications/cspl/processing/char_filter.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "applications/cspl/processing/common.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "applications/cspl/processing/file_sink.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "applications/cspl/processing/file_source.cpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "applications/cspl/processing/file_source.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "applications/cspl/processing/filter_buffer.cpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "applications/cspl/processing/filter_buffer.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "applications/cspl/processing/hunspell_checker.cpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "applications/cspl/processing/hunspell_checker.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "applications/cspl/processing/hunspell_fixer.cpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "applications/cspl/processing/hunspell_fixer.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "applications/cspl/processing/item_iterator.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "applications/cspl/processing/item_sink.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "applications/cspl/processing/item_source.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "applications/cspl/processing/stdio_source.cpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "applications/cspl/processing/stdio_source.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "applications/cspl/processing/word_converter.cpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "applications/cspl/processing/word_converter.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "applications/cspl/run_config.cpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "applications/cspl/run_config.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
     "lib/libcmake/cmake.cpp": {
         "additional_authors": [],
         "brief": ""
     },
     "lib/libcmake/cmake.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "lib/lotrame/include/lotrame.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "lib/lotrame/include/lotrame/common.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "lib/lotrame/include/lotrame/engine.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "lib/lotrame/include/lotrame/log_handler.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "lib/lotrame/include/lotrame/queue.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "lib/lotrame/include/lotrame/trace.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "lib/lotrame/lotrame.cpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "lib/lotrame/src/engine.cpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "lib/lotrame/src/log_handler.cpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "lib/lotrame/src/trace.cpp": {
         "additional_authors": [],
         "brief": ""
     },
