@@ -1,1 +1,22 @@
-{}
+{
+    "applications/cmk/cmk.cpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "lib/libcmake/cmake.cpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "lib/libcmake/cmake.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "lib/utilities/include/utilities/version.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "lib/utilities/src/version.cpp": {
+        "additional_authors": [],
+        "brief": ""
+    }
+}

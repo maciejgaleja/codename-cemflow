@@ -79,7 +79,9 @@
             "cc"
         ],
         "source_directories": [
-            "."
+            "applications",
+            "lib/libcmake",
+            "lib/utilities"
         ]
     },
     "sections": {
