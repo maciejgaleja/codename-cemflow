@@ -1,45 +1,36 @@
+/* @file          cmk.cpp                                                     */
+/* @date          2020-05-02                                                  */
+
 #include <clipp.h>
 #include <cstdlib>
 #include <filesystem>
 #include <iostream>
 #include <sstream>
 
+#include "run_config.hpp"
+
+#include <utilities/env.hpp>
+
 using namespace clipp;
-using std::cout;
 using std::cerr;
+using std::cout;
 using std::string;
 
 namespace fs = std::filesystem;
 
-class RunConfig
-{
-public:
-    enum class Mode
-    {
-        GENERATE,
-        BUILD,
-        INSTALL,
-        CLEAN,
-        REBUILD
-    };
-    Mode mode = Mode::GENERATE;
-    fs::path project_dir;
-    fs::path build_dir;
-    std::string install_dir;
-};
 
 static bool read_env(const std::string& name, std::string& dst)
 {
-    bool ret             = true;
-    char* install_path_c = getenv(name.c_str());
-    ret                  = (install_path_c != nullptr);
-    if(ret)
+    bool ret   = true;
+    auto value = Env::get(name);
+    if(value)
     {
-        dst = std::string(install_path_c);
+        dst = *value;
     }
     else
     {
         std::cerr << "Environment variable \"" << name << "\" not found\n";
+        ret = false;
     }
     return ret;
 }
@@ -53,8 +44,8 @@ static bool generate(RunConfig& cfg)
     if(ret)
     {
         std::stringstream ss;
-        ss << "cmake -DCMAKE_INSTALL_PREFIX=" << cfg.install_dir << " -S " << cfg.project_dir.string() << " -B "
-           << cfg.build_dir.string();
+        ss << "cmake -DCMAKE_INSTALL_PREFIX=" << cfg.install_dir << " -S "
+           << cfg.project_dir.string() << " -B " << cfg.build_dir.string();
         cout << ss.str() << '\n';
         system(ss.str().c_str());
     }
@@ -124,7 +115,8 @@ int main(int argc, char* argv[])
     auto cli_install =
         (command("install").set(cfg.mode, RunConfig::Mode::INSTALL));
     auto cli_clean = (command("clean").set(cfg.mode, RunConfig::Mode::CLEAN));
-    auto cli_rebuild = (command("rebuild").set(cfg.mode, RunConfig::Mode::REBUILD));
+    auto cli_rebuild =
+        (command("rebuild").set(cfg.mode, RunConfig::Mode::REBUILD));
 
     auto cli = cli_generate | cli_build | cli_install | cli_clean | cli_rebuild;
 
