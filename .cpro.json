@@ -1,0 +1,93 @@
+{
+    "code": {
+        "line_width": 80,
+        "newline": "\n"
+    },
+    "comment": {
+        "basic_begin": "/* ",
+        "basic_end": " */",
+        "block_begin": "/**",
+        "block_end": " */",
+        "continued_begin": " * ",
+        "continued_end": " * ",
+        "doxy_is_just_right": false,
+        "doxy_just_width": 15,
+        "solid_fill_character": "*"
+    },
+    "footer": {
+        "content": [
+            "/******************************************************************************/"
+        ]
+    },
+    "header": {
+        "file_base_path": [
+            [
+                ""
+            ]
+        ],
+        "filename_only": false,
+        "is_block_comment": true,
+        "template": [
+            "/**",
+            "${FILE}",
+            "${AUTHOR}",
+            "${DATE}",
+            "${BRIEF}",
+            " **/"
+        ]
+    },
+    "header_guard": {
+        "endif_comment_begin": "// ",
+        "endif_comment_end": "",
+        "extension_separator": "_",
+        "file_base_path": [
+            [
+                ""
+            ]
+        ],
+        "path_separator": "__",
+        "prefix": "",
+        "suffix": ""
+    },
+    "main": {
+        "clang_format_executable": "clang-format",
+        "git_executable": "git"
+    },
+    "metadata": {
+        "authors_exclude": [
+            ""
+        ],
+        "authors_include_email": true
+    },
+    "operations": {
+        "clang_format": true,
+        "format_footer": false,
+        "format_header": false,
+        "header_guard": false,
+        "sections": false
+    },
+    "scope": {
+        "extensions_header": [
+            "h",
+            "hpp",
+            "hxx"
+        ],
+        "extensions_source": [
+            "c",
+            "cpp",
+            "cxx",
+            "cc"
+        ],
+        "source_directories": [
+            "."
+        ]
+    },
+    "sections": {
+        "solid_comment_line": true,
+        "templates": {
+            "Includes": [
+                "#include "
+            ]
+        }
+    }
+}
