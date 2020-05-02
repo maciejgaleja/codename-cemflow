@@ -9,6 +9,8 @@
 
 #include "run_config.hpp"
 
+#include <utilities/env.hpp>
+
 using namespace clipp;
 using std::cerr;
 using std::cout;
@@ -19,16 +21,16 @@ namespace fs = std::filesystem;
 
 static bool read_env(const std::string& name, std::string& dst)
 {
-    bool ret             = true;
-    char* install_path_c = getenv(name.c_str());
-    ret                  = (install_path_c != nullptr);
-    if(ret)
+    bool ret   = true;
+    auto value = Env::get(name);
+    if(value)
     {
-        dst = std::string(install_path_c);
+        dst = *value;
     }
     else
     {
         std::cerr << "Environment variable \"" << name << "\" not found\n";
+        ret = false;
     }
     return ret;
 }
