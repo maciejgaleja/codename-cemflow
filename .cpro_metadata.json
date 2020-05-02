@@ -131,6 +131,46 @@
         "additional_authors": [],
         "brief": ""
     },
+    "lib/lotrame/include/lotrame.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "lib/lotrame/include/lotrame/common.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "lib/lotrame/include/lotrame/engine.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "lib/lotrame/include/lotrame/log_handler.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "lib/lotrame/include/lotrame/queue.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "lib/lotrame/include/lotrame/trace.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "lib/lotrame/lotrame.cpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "lib/lotrame/src/engine.cpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "lib/lotrame/src/log_handler.cpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "lib/lotrame/src/trace.cpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
     "lib/utilities/include/utilities/env.hpp": {
         "additional_authors": [],
         "brief": ""

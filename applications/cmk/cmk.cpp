@@ -1,14 +1,13 @@
 /* @file          cmk.cpp                                                     */
 /* @date          2020-05-02                                                  */
 
+#include "run_config.hpp"
+
 #include <clipp.h>
 #include <cstdlib>
 #include <filesystem>
 #include <iostream>
 #include <sstream>
-
-#include "run_config.hpp"
-
 #include <utilities/env.hpp>
 
 using namespace clipp;

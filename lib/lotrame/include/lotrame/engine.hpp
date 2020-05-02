@@ -1,8 +1,8 @@
-/* @file          engine.h                                                    */
+/* @file          engine.hpp                                                  */
 /* @date          2020-05-02                                                  */
 
-#ifndef LIB__LOTRAME__INTERNAL__ENGINE_H
-#define LIB__LOTRAME__INTERNAL__ENGINE_H
+#ifndef LIB__LOTRAME__INCLUDE__LOTRAME__ENGINE_HPP
+#define LIB__LOTRAME__INCLUDE__LOTRAME__ENGINE_HPP
 
 
 #include "common.hpp"
@@ -13,30 +13,38 @@
 #include <mutex>
 #include <sstream>
 
-namespace ltr {
+namespace ltr
+{
 
 class Trace;
 
-class Engine {
+class Engine
+{
 public:
-  void traceRegister(const Trace *trace);
-  void traceUnRegister(const Trace *trace);
+    void traceRegister(const Trace* trace);
+    void traceUnRegister(const Trace* trace);
 
-  void log(const Message &msg);
+    void log(const Message& msg);
 
-  void setSeverity(Severity sev);
+    void setSeverity(Severity sev);
 
-  LogHandler debug() { return LogHandler(*this, Severity::Debug); }
+    LogHandler debug()
+    {
+        return LogHandler(*this, Severity::Debug);
+    }
 
-  LogHandler error() { return LogHandler(*this, Severity::Error); }
+    LogHandler error()
+    {
+        return LogHandler(*this, Severity::Error);
+    }
 
 private:
-  std::mutex m_mutex;
-  std::map<std::thread::id, std::list<const Trace *>> m_traces;
-  Severity m_severity_level = Severity::Trace;
+    std::mutex m_mutex;
+    std::map<std::thread::id, std::list<const Trace*>> m_traces;
+    Severity m_severity_level = Severity::Trace;
 };
 
 } // namespace ltr
 
 
-#endif // LIB__LOTRAME__INTERNAL__ENGINE_H
+#endif // LIB__LOTRAME__INCLUDE__LOTRAME__ENGINE_HPP

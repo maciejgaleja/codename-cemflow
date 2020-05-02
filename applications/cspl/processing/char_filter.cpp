@@ -3,9 +3,9 @@
 
 #include "char_filter.hpp"
 
-#include <lotrame.hpp>
 #include <iomanip>
 #include <iostream>
+#include <lotrame.hpp>
 
 using std::cout;
 

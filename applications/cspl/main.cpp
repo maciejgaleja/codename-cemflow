@@ -24,6 +24,8 @@ using std::cout;
 
 int main(int argc, char** argv)
 {
+    logging.setSeverity(ltr::Severity::Fatal);
+
     int ret = -1;
     std::vector<std::string> filter_strings;
 
