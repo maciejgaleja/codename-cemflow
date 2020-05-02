@@ -77,7 +77,8 @@
         "source_directories": [
             "applications",
             "lib/libcmake",
-            "lib/utilities"
+            "lib/utilities",
+            "lib/lotrame"
         ]
     },
     "sections": {
