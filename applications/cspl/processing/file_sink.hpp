@@ -5,7 +5,6 @@
 #define APPLICATIONS__CSPL__PROCESSING__FILE_SINK_HPP
 
 
-
 #include "item_sink.hpp"
 
 #include <sstream>
@@ -44,7 +43,6 @@ private:
     std::stringstream m_buffer;
     std::string m_file;
 };
-
 
 
 #endif // APPLICATIONS__CSPL__PROCESSING__FILE_SINK_HPP

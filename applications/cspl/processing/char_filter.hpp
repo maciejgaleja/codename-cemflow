@@ -5,7 +5,6 @@
 #define APPLICATIONS__CSPL__PROCESSING__CHAR_FILTER_HPP
 
 
-
 #include <functional>
 
 #include "common.hpp"

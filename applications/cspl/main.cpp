@@ -7,6 +7,8 @@
 
 #include "cspl.hpp"
 
+#include <lotrame.hpp>
+
 using clipp::command;
 using clipp::make_man_page;
 using clipp::opt_values;

@@ -14,5 +14,4 @@ public:
 };
 
 
-
 #endif // APPLICATIONS__CSPL__PROCESSING__ITEM_SINK_HPP

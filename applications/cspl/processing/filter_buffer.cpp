@@ -5,8 +5,11 @@
 #include <algorithm>
 #include <iostream>
 
+#include <lotrame.hpp>
+
 FilterBuffer::FilterBuffer(const std::string& pattern)
 {
+    debug() << "Creating filter for " << pattern;
     for(char c : pattern)
     {
         m_pattern.push_back(c);
@@ -26,7 +29,6 @@ std::pair<bool, Char> FilterBuffer::add(Char c)
     m_buffer.push_back(c);
 
     bool ret = std::equal(m_pattern.begin(), m_pattern.end(), m_buffer.begin());
-    //std::cout << debugToString(m_buffer) << " " << ret << "\n";
 
     return {ret, ret_c};
 }

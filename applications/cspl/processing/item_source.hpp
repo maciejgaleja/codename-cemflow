@@ -34,5 +34,4 @@ protected:
 };
 
 
-
 #endif // APPLICATIONS__CSPL__PROCESSING__ITEM_SOURCE_HPP
