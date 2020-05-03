@@ -78,6 +78,7 @@
             "applications",
             "lib/libcmake",
             "lib/utilities",
+            "lib/libresult",
             "lib/lotrame"
         ]
     },

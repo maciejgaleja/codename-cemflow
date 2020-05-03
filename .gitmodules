@@ -4,3 +4,6 @@
 [submodule "lib/hunspell"]
 	path = lib/hunspell
 	url = git@github.com:maciejgaleja/hunspell.git
+[submodule "lib/libresult"]
+	path = lib/libresult
+	url = git@github.com:maciejgaleja/libresult.git
