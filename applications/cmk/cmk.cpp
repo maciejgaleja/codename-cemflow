@@ -1,6 +1,7 @@
 /* @file          cmk.cpp                                                     */
 /* @date          2020-05-02                                                  */
 
+#include "errors.hpp"
 #include "run_config.hpp"
 
 #include <clipp.h>
@@ -18,20 +19,18 @@ using std::string;
 namespace fs = std::filesystem;
 
 
-static bool read_env(const std::string& name, std::string& dst)
+static Result<std::string> read_env(const std::string& name)
 {
-    bool ret   = true;
     auto value = Env::get(name);
     if(value)
     {
-        dst = *value;
+        return Result<std::string>::ok(*value);
     }
     else
     {
-        std::cerr << "Environment variable \"" << name << "\" not found\n";
-        ret = false;
+        return Result<std::string>::err<EnvError>("Could not get \"" + name +
+                                                  "\"");
     }
-    return ret;
 }
 
 static bool generate(RunConfig& cfg)
@@ -129,10 +128,11 @@ int main(int argc, char* argv[])
         cfg.build_dir   = cfg.project_dir;
         cfg.build_dir.append("_build");
 
-        bool ok = read_env("CMK_INSTALL_DIR", cfg.install_dir);
+        auto cmk_install_dir = read_env("CMK_INSTALL_DIR");
 
-        if(ok)
+        if(cmk_install_dir)
         {
+            cfg.install_dir = cmk_install_dir.value();
             switch(cfg.mode)
             {
             case RunConfig::Mode::GENERATE:
@@ -161,6 +161,7 @@ int main(int argc, char* argv[])
         }
         else
         {
+            cerr << cmk_install_dir.error().to_string();
             ret = -1;
         }
     }
