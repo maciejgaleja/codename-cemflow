@@ -14,6 +14,5 @@ add_executable(cspl
 	dictionary/custom_dictionary.hpp   dictionary/custom_dictionary.cpp
 	dictionary/dictionary.hpp          dictionary/dictionary.cpp
 )
-target_link_libraries(cspl hunspell clipp lotrame)
-set_property(TARGET cspl PROPERTY CXX_STANDARD 17)
+target_link_libraries(cspl hunspell clipp lotrame -lstdc++fs)
 install(TARGETS cspl)

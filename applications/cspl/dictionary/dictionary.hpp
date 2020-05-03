@@ -5,7 +5,14 @@
 #define APPLICATIONS__CSPL__DICTIONARY__DICTIONARY_HPP
 
 
+#if GCC_VERSION < 90000
+#include <experimental/filesystem>
+namespace fs = std::experimental::filesystem;
+#else
 #include <filesystem>
+namespace fs = std::filesystem;
+#endif
+
 #include <vector>
 
 #include <hunspell.hxx>
@@ -31,7 +38,7 @@ private:
     std::vector<CustomDictionary> m_custom;
     std::vector<Word> m_added_words;
 
-    std::vector<std::filesystem::path>
+    std::vector<fs::path>
     get_parent_paths(const std::string& root_path);
 
     int ask_where_to_add_word(const Word& word);

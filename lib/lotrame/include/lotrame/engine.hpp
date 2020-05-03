@@ -12,6 +12,7 @@
 #include <map>
 #include <mutex>
 #include <sstream>
+#include <thread>
 
 namespace ltr
 {

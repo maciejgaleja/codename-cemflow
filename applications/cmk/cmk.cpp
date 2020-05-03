@@ -6,7 +6,14 @@
 
 #include <clipp.h>
 #include <cstdlib>
+#if GCC_VERSION < 90000
+#include <experimental/filesystem>
+namespace fs = std::experimental::filesystem;
+#else
 #include <filesystem>
+namespace fs = std::filesystem;
+#endif
+
 #include <iostream>
 #include <sstream>
 #include <utilities/env.hpp>
@@ -15,8 +22,6 @@ using namespace clipp;
 using std::cerr;
 using std::cout;
 using std::string;
-
-namespace fs = std::filesystem;
 
 
 static Result<std::string> read_env(const std::string& name)

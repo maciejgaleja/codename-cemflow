@@ -11,3 +11,4 @@
   include/lotrame/queue.hpp
   include/lotrame/trace.hpp)
 target_include_directories(lotrame PUBLIC ./include)
+set_property(TARGET lotrame PROPERTY CXX_STANDARD 17)
