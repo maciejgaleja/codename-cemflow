@@ -9,6 +9,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        submodules: true
     - name: prepare
       run: mkdir _build
     - name: generate
