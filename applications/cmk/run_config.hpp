@@ -4,7 +4,13 @@
 #ifndef APPLICATIONS__CMK__RUN_CONFIG_HPP
 #define APPLICATIONS__CMK__RUN_CONFIG_HPP
 
+#if GCC_VERSION < 90000
+#include <experimental/filesystem>
+namespace fs = std::experimental::filesystem;
+#else
 #include <filesystem>
+namespace fs = std::filesystem;
+#endif
 
 class RunConfig
 {
@@ -18,8 +24,8 @@ public:
         REBUILD
     };
     Mode mode = Mode::GENERATE;
-    std::filesystem::path project_dir;
-    std::filesystem::path build_dir;
+    fs::path project_dir;
+    fs::path build_dir;
     std::string install_dir;
 };
 

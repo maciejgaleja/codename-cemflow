@@ -9,7 +9,14 @@
 using std::cin;
 using std::cout;
 
+#if GCC_VERSION < 90000
+#include <experimental/filesystem>
+namespace fs = std::experimental::filesystem;
+#else
+#include <filesystem>
 namespace fs = std::filesystem;
+#endif
+
 
 Dictionary::Dictionary(Hunspell& hs,
                        const std::string& language,
@@ -49,7 +56,7 @@ void Dictionary::add(Word word)
     m_added_words.push_back(word);
 }
 
-std::vector<std::filesystem::path>
+std::vector<fs::path>
 Dictionary::get_parent_paths(const std::string& root_path)
 {
     std::vector<fs::path> ret;
