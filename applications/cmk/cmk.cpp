@@ -47,7 +47,12 @@ static bool generate(RunConfig& cfg)
     if(ret)
     {
         std::stringstream ss;
-        ss << "cmake -DCMAKE_INSTALL_PREFIX=" << cfg.install_dir << " -S "
+        ss << "cmake ";
+        for(const std::string& arg : cfg.cmake_extra_args)
+        {
+            ss << arg << " ";
+        }
+        ss << "-DCMAKE_INSTALL_PREFIX=" << cfg.install_dir << " -S "
            << cfg.project_dir.string() << " -B " << cfg.build_dir.string();
         cout << ss.str() << '\n';
         system(ss.str().c_str());
@@ -113,7 +118,8 @@ int main(int argc, char* argv[])
     string infile = "", fmt = "csv";
 
     auto cli_generate =
-        (command("gen").set(cfg.mode, RunConfig::Mode::GENERATE));
+        (command("gen").set(cfg.mode, RunConfig::Mode::GENERATE) &
+         (option("--") & opt_values("EXTRA_CMAKE_ARGS", cfg.cmake_extra_args)));
     auto cli_build = (command("build").set(cfg.mode, RunConfig::Mode::BUILD));
     auto cli_install =
         (command("install").set(cfg.mode, RunConfig::Mode::INSTALL));

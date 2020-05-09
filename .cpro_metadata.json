@@ -3,6 +3,10 @@
         "additional_authors": [],
         "brief": ""
     },
+    "applications/cmk/errors.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
     "applications/cmk/run_config.hpp": {
         "additional_authors": [],
         "brief": ""
