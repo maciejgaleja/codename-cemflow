@@ -38,8 +38,7 @@ private:
     std::vector<CustomDictionary> m_custom;
     std::vector<Word> m_added_words;
 
-    std::vector<fs::path>
-    get_parent_paths(const std::string& root_path);
+    std::vector<fs::path> get_parent_paths(const std::string& root_path);
 
     int ask_where_to_add_word(const Word& word);
 };
