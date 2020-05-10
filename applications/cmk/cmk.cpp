@@ -165,7 +165,7 @@ int main(int argc, char* argv[])
         }
         else
         {
-            cerr << cmk_install_dir.error().to_string();
+            cerr << cmk_install_dir.error().to_string() << "\n";
             ret = -1;
         }
     }
