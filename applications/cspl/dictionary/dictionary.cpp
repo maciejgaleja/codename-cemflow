@@ -56,8 +56,7 @@ void Dictionary::add(Word word)
     m_added_words.push_back(word);
 }
 
-std::vector<fs::path>
-Dictionary::get_parent_paths(const std::string& root_path)
+std::vector<fs::path> Dictionary::get_parent_paths(const std::string& root_path)
 {
     std::vector<fs::path> ret;
     fs::path p = root_path;

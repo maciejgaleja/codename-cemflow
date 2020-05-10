@@ -24,6 +24,7 @@ public:
         REBUILD
     };
     Mode mode = Mode::GENERATE;
+    std::vector<std::string> cmake_extra_args;
     fs::path project_dir;
     fs::path build_dir;
     std::string install_dir;
