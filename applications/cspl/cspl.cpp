@@ -1,5 +1,4 @@
 /* @file          cspl.cpp                                                    */
-/* @date          2020-05-02                                                  */
 
 #include <iostream>
 
@@ -135,10 +134,10 @@ int cspl(RunConfig& cfg)
     fs::path dict_root(CSPL_DICTIONARY_DIR);
     auto dict_aff = (dict_root / "en_US.aff").string();
     auto dict_dic = (dict_root / "en_US.dic").string();
-    #ifdef _WIN32
-    std::replace( dict_aff.begin(), dict_aff.end(), '/', '\\');
-    std::replace( dict_dic.begin(), dict_dic.end(), '/', '\\');
-    #endif
+#ifdef _WIN32
+    std::replace(dict_aff.begin(), dict_aff.end(), '/', '\\');
+    std::replace(dict_dic.begin(), dict_dic.end(), '/', '\\');
+#endif
 
     Hunspell hs(dict_aff.c_str(), dict_dic.c_str());
     Dictionary dict(hs, cfg.language, ".");

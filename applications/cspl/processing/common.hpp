@@ -1,5 +1,4 @@
 /* @file          common.hpp                                                  */
-/* @date          2020-05-02                                                  */
 
 #ifndef APPLICATIONS__CSPL__PROCESSING__COMMON_HPP
 #define APPLICATIONS__CSPL__PROCESSING__COMMON_HPP

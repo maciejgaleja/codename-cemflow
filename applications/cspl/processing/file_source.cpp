@@ -1,5 +1,4 @@
 /* @file          file_source.cpp                                             */
-/* @date          2020-05-02                                                  */
 
 #include "file_source.hpp"
 

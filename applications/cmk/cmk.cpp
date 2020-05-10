@@ -1,12 +1,11 @@
 /* @file          cmk.cpp                                                     */
-/* @date          2020-05-02                                                  */
 
 #include "errors.hpp"
+#include "filesystem.hpp"
 #include "run_config.hpp"
 
 #include <clipp.h>
 #include <cstdlib>
-#include "filesystem.hpp"
 #include <iostream>
 #include <sstream>
 #include <utilities/env.hpp>
@@ -134,39 +133,39 @@ int main(int argc, char* argv[])
 
         auto cmk_install_dir = read_env("CMK_INSTALL_DIR");
 
-        if(cmk_install_dir)
+        switch(cfg.mode)
         {
-            cfg.install_dir = cmk_install_dir.value();
-            switch(cfg.mode)
+        case RunConfig::Mode::GENERATE:
+            if(cmk_install_dir)
             {
-            case RunConfig::Mode::GENERATE:
+                cfg.install_dir = cmk_install_dir.value();
                 generate(cfg);
-                break;
-            case RunConfig::Mode::BUILD:
-                build(cfg);
-                break;
-            case RunConfig::Mode::INSTALL:
-                build(cfg);
-                install(cfg);
-                break;
-            case RunConfig::Mode::CLEAN:
-                clean(cfg);
-                break;
-            case RunConfig::Mode::REBUILD:
-                clean(cfg);
-                generate(cfg);
-                build(cfg);
-                break;
-            default:
-                cout << "NOT IMPLEMENTED\n";
-                ret = -1;
-                break;
             }
-        }
-        else
-        {
-            cerr << cmk_install_dir.error().to_string() << "\n";
+            else
+            {
+                cerr << cmk_install_dir.error().to_string();
+                ret = -1;
+            }
+            break;
+        case RunConfig::Mode::BUILD:
+            build(cfg);
+            break;
+        case RunConfig::Mode::INSTALL:
+            build(cfg);
+            install(cfg);
+            break;
+        case RunConfig::Mode::CLEAN:
+            clean(cfg);
+            break;
+        case RunConfig::Mode::REBUILD:
+            clean(cfg);
+            generate(cfg);
+            build(cfg);
+            break;
+        default:
+            cout << "NOT IMPLEMENTED\n";
             ret = -1;
+            break;
         }
     }
     return ret;

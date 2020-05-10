@@ -1,5 +1,4 @@
 /* @file          custom_dictionary.cpp                                       */
-/* @date          2020-05-02                                                  */
 
 #include "custom_dictionary.hpp"
 

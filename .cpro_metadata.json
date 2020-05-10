@@ -7,6 +7,10 @@
         "additional_authors": [],
         "brief": ""
     },
+    "applications/cmk/filesystem.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
     "applications/cmk/run_config.hpp": {
         "additional_authors": [],
         "brief": ""
@@ -32,6 +36,10 @@
         "brief": ""
     },
     "applications/cspl/dictionary/dictionary.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "applications/cspl/filesystem.hpp": {
         "additional_authors": [],
         "brief": ""
     },

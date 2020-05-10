@@ -1,5 +1,4 @@
 /* @file          version.hpp                                                 */
-/* @date          2020-05-02                                                  */
 
 
 #ifndef LIB__UTILITIES__INCLUDE__UTILITIES__VERSION_HPP

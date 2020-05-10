@@ -1,5 +1,4 @@
 /* @file          main.cpp                                                    */
-/* @date          2020-05-02                                                  */
 
 #ifndef CSPL_DICTIONARY_DIR
 #error "CSPL_DICTIONARY_DIR not set. Define it with dictionary directory path"

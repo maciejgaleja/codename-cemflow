@@ -1,5 +1,4 @@
 /* @file          custom_dictionary.hpp                                       */
-/* @date          2020-05-02                                                  */
 
 #ifndef APPLICATIONS__CSPL__DICTIONARY__CUSTOM_DICTIONARY_HPP
 #define APPLICATIONS__CSPL__DICTIONARY__CUSTOM_DICTIONARY_HPP

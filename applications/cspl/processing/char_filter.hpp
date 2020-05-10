@@ -1,5 +1,4 @@
 /* @file          char_filter.hpp                                             */
-/* @date          2020-05-02                                                  */
 
 #ifndef APPLICATIONS__CSPL__PROCESSING__CHAR_FILTER_HPP
 #define APPLICATIONS__CSPL__PROCESSING__CHAR_FILTER_HPP

@@ -1,5 +1,4 @@
 /* @file          run_config.cpp                                              */
-/* @date          2020-05-02                                                  */
 
 #include "run_config.hpp"
 #include "log.hpp"

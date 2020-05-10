@@ -1,5 +1,4 @@
 /* @file          stdio_source.hpp                                            */
-/* @date          2020-05-02                                                  */
 
 #ifndef APPLICATIONS__CSPL__PROCESSING__STDIO_SOURCE_HPP
 #define APPLICATIONS__CSPL__PROCESSING__STDIO_SOURCE_HPP

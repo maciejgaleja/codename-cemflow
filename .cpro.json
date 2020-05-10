@@ -28,8 +28,7 @@
         "filename_only": true,
         "is_block_comment": false,
         "template": [
-            "${FILE}",
-            "${DATE}"
+            "${FILE}"
         ]
     },
     "header_guard": {

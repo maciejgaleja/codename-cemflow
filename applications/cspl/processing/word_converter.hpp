@@ -1,5 +1,4 @@
 /* @file          word_converter.hpp                                          */
-/* @date          2020-05-02                                                  */
 
 #ifndef APPLICATIONS__CSPL__PROCESSING__WORD_CONVERTER_HPP
 #define APPLICATIONS__CSPL__PROCESSING__WORD_CONVERTER_HPP

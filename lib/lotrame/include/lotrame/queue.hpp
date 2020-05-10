@@ -1,5 +1,4 @@
 /* @file          queue.hpp                                                   */
-/* @date          2020-05-02                                                  */
 
 #ifndef LIB__LOTRAME__INCLUDE__LOTRAME__QUEUE_HPP
 #define LIB__LOTRAME__INCLUDE__LOTRAME__QUEUE_HPP
