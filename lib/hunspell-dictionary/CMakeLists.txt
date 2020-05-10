@@ -5,7 +5,7 @@ if(NOT EXISTS ${CMAKE_CURRENT_BINARY_DIR}/${DICT_FILE_AFF})
   message("Downloading dictionary")
   file(
     DOWNLOAD
-    https://cgit.freedesktop.org/libreoffice/dictionaries/tree/en/${DICT_FILE_AFF}
+    https://cgit.freedesktop.org/libreoffice/dictionaries/plain/en/${DICT_FILE_AFF}
     ${CMAKE_CURRENT_BINARY_DIR}/${DICT_FILE_AFF}
     SHOW_PROGRESS)
 endif()
@@ -15,11 +15,11 @@ if(NOT EXISTS ${CMAKE_CURRENT_BINARY_DIR}/${DICT_FILE_DIC})
   message("Downloading dictionary")
   file(
     DOWNLOAD
-    https://cgit.freedesktop.org/libreoffice/dictionaries/tree/en/${DICT_FILE_DIC}
+    https://cgit.freedesktop.org/libreoffice/dictionaries/plain/en/${DICT_FILE_DIC}
     ${CMAKE_CURRENT_BINARY_DIR}/${DICT_FILE_DIC}
     SHOW_PROGRESS)
 endif()
 
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${DICT_FILE_AFF}
               ${CMAKE_CURRENT_BINARY_DIR}/${DICT_FILE_DIC}
-        DESTINATION ${CMAKE_INSTALL_DATAROOTDIR})
+        DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/hunspell)
