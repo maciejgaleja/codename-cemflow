@@ -1,5 +1,4 @@
 /* @file          dictionary.cpp                                              */
-/* @date          2020-05-02                                                  */
 
 #include "dictionary.hpp"
 #include "../log.hpp"

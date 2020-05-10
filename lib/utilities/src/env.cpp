@@ -1,5 +1,4 @@
 /* @file          env.cpp                                                     */
-/* @date          2020-05-02                                                  */
 
 #include "utilities/env.hpp"
 

@@ -1,5 +1,4 @@
 /* @file          run_config.hpp                                              */
-/* @date          2020-05-02                                                  */
 
 #ifndef APPLICATIONS__CMK__RUN_CONFIG_HPP
 #define APPLICATIONS__CMK__RUN_CONFIG_HPP

@@ -1,5 +1,4 @@
 /* @file          cspl.cpp                                                    */
-/* @date          2020-05-02                                                  */
 
 #include <iostream>
 

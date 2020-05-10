@@ -1,5 +1,4 @@
 /* @file          item_iterator.hpp                                           */
-/* @date          2020-05-02                                                  */
 
 #ifndef APPLICATIONS__CSPL__PROCESSING__ITEM_ITERATOR_HPP
 #define APPLICATIONS__CSPL__PROCESSING__ITEM_ITERATOR_HPP

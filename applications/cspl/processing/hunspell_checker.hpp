@@ -1,5 +1,4 @@
 /* @file          hunspell_checker.hpp                                        */
-/* @date          2020-05-02                                                  */
 
 #ifndef APPLICATIONS__CSPL__PROCESSING__HUNSPELL_CHECKER_HPP
 #define APPLICATIONS__CSPL__PROCESSING__HUNSPELL_CHECKER_HPP

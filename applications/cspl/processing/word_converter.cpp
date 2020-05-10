@@ -1,5 +1,4 @@
 /* @file          word_converter.cpp                                          */
-/* @date          2020-05-02                                                  */
 
 #include "word_converter.hpp"
 

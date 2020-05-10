@@ -1,5 +1,4 @@
 /* @file          item_source.hpp                                             */
-/* @date          2020-05-02                                                  */
 
 #ifndef APPLICATIONS__CSPL__PROCESSING__ITEM_SOURCE_HPP
 #define APPLICATIONS__CSPL__PROCESSING__ITEM_SOURCE_HPP

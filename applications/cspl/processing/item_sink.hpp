@@ -1,5 +1,4 @@
 /* @file          item_sink.hpp                                               */
-/* @date          2020-05-02                                                  */
 
 #ifndef APPLICATIONS__CSPL__PROCESSING__ITEM_SINK_HPP
 #define APPLICATIONS__CSPL__PROCESSING__ITEM_SINK_HPP

@@ -1,5 +1,4 @@
 /* @file          filter_buffer.cpp                                           */
-/* @date          2020-05-02                                                  */
 
 #include "filter_buffer.hpp"
 #include <algorithm>

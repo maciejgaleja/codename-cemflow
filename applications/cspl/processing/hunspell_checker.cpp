@@ -1,5 +1,4 @@
 /* @file          hunspell_checker.cpp                                        */
-/* @date          2020-05-02                                                  */
 
 #include "hunspell_checker.hpp"
 

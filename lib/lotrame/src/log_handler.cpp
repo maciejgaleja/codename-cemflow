@@ -1,5 +1,4 @@
 /* @file          log_handler.cpp                                             */
-/* @date          2020-05-02                                                  */
 
 #include "lotrame/log_handler.hpp"
 

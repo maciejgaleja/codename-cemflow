@@ -1,5 +1,4 @@
 /* @file          common.hpp                                                  */
-/* @date          2020-05-02                                                  */
 
 #ifndef LIB__LOTRAME__INCLUDE__LOTRAME__COMMON_HPP
 #define LIB__LOTRAME__INCLUDE__LOTRAME__COMMON_HPP

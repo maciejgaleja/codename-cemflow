@@ -1,5 +1,4 @@
 /* @file          char_filter.cpp                                             */
-/* @date          2020-05-02                                                  */
 
 #include "char_filter.hpp"
 

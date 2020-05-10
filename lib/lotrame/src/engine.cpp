@@ -1,5 +1,4 @@
 /* @file          engine.cpp                                                  */
-/* @date          2020-05-02                                                  */
 
 #include "lotrame/engine.hpp"
 
