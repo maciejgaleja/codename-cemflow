@@ -6,14 +6,7 @@
 
 #include <clipp.h>
 #include <cstdlib>
-#if GCC_VERSION < 90000
-#include <experimental/filesystem>
-namespace fs = std::experimental::filesystem;
-#else
-#include <filesystem>
-namespace fs = std::filesystem;
-#endif
-
+#include "filesystem.hpp"
 #include <iostream>
 #include <sstream>
 #include <utilities/env.hpp>
@@ -172,7 +165,7 @@ int main(int argc, char* argv[])
         }
         else
         {
-            cerr << cmk_install_dir.error().to_string();
+            cerr << cmk_install_dir.error().to_string() << "\n";
             ret = -1;
         }
     }

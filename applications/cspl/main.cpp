@@ -1,6 +1,10 @@
 /* @file          main.cpp                                                    */
 /* @date          2020-05-02                                                  */
 
+#ifndef CSPL_DICTIONARY_DIR
+#error "CSPL_DICTIONARY_DIR not set. Define it with dictionary directory path"
+#endif
+
 #include <clipp.h>
 
 #include <iostream>
@@ -8,6 +12,8 @@
 #include "cspl.hpp"
 
 #include <lotrame.hpp>
+
+#include "filesystem.hpp"
 
 using clipp::command;
 using clipp::make_man_page;
@@ -20,7 +26,6 @@ using clipp::value;
 using clipp::values;
 
 using std::cout;
-
 
 int main(int argc, char** argv)
 {
@@ -70,6 +75,7 @@ int main(int argc, char** argv)
     else
     {
         cout << make_man_page(cli, argv[0]) << '\n';
+        cout << "Dictionary directory: " << CSPL_DICTIONARY_DIR << "\n";
     }
     return ret;
 }

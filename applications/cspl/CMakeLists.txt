@@ -1,3 +1,6 @@
+set(CSPL_DICTIONARY_DIR
+	${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_DATAROOTDIR}/hunspell)
+
 add_executable(cspl
 	main.cpp
 	cspl.hpp                           cspl.cpp
@@ -15,4 +18,7 @@ add_executable(cspl
 	dictionary/dictionary.hpp          dictionary/dictionary.cpp
 )
 target_link_libraries(cspl hunspell clipp lotrame -lstdc++fs)
+target_compile_definitions(cspl
+	PRIVATE
+		CSPL_DICTIONARY_DIR="${CSPL_DICTIONARY_DIR}")
 install(TARGETS cspl)
