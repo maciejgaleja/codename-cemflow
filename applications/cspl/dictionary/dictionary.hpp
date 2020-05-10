@@ -4,14 +4,7 @@
 #ifndef APPLICATIONS__CSPL__DICTIONARY__DICTIONARY_HPP
 #define APPLICATIONS__CSPL__DICTIONARY__DICTIONARY_HPP
 
-
-#if GCC_VERSION < 90000
-#include <experimental/filesystem>
-namespace fs = std::experimental::filesystem;
-#else
-#include <filesystem>
-namespace fs = std::filesystem;
-#endif
+#include "../filesystem.hpp"
 
 #include <vector>
 
