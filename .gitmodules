@@ -7,6 +7,3 @@
 [submodule "lib/libresult"]
 	path = lib/libresult
 	url = https://github.com/maciejgaleja/libresult.git
-[submodule "lib/libgit2"]
-	path = lib/libgit2
-	url = https://github.com/libgit2/libgit2.git
