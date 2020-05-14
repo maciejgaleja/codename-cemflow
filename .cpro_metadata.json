@@ -143,6 +143,18 @@
         "additional_authors": [],
         "brief": ""
     },
+    "lib/libresult/include/error/error.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "lib/libresult/include/error/result.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
+    "lib/libresult/include/libresult.hpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
     "lib/lotrame/include/lotrame.hpp": {
         "additional_authors": [],
         "brief": ""
