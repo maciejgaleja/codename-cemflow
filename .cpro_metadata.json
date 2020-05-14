@@ -135,6 +135,10 @@
         "additional_authors": [],
         "brief": ""
     },
+    "applications/git-info/main.cpp": {
+        "additional_authors": [],
+        "brief": ""
+    },
     "lib/libcmake/cmake.cpp": {
         "additional_authors": [],
         "brief": ""
