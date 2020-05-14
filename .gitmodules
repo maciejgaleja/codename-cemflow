@@ -4,3 +4,6 @@
 [submodule "lib/hunspell"]
 	path = lib/hunspell
 	url = https://github.com/maciejgaleja/hunspell.git
+[submodule "applications/cpro"]
+	path = applications/cpro
+	url = https://github.com/maciejgaleja/cpro.git
